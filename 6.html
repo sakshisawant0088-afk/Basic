@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>byte to bit</title>
+</head>
+<body>
+
+<h1>byte to bit</h1>
+
+<input type="number" id="byte" placeholder="Enter Bytes">
+<button onclick="convert()">Convert</button>
+
+<p id="result"></p>
+
+<script>
+function convert() {
+    let bytes = Number(document.getElementById("byte").value);
+
+    let bits = bytes * 8;
+
+    document.getElementById("result").innerHTML = bits + " Bits";
+}
+</script>
+
+</body>
+</html>

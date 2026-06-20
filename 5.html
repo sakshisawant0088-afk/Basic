@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Net Salary</title>
+    <script>
+    function getValue(){
+
+      let gs=parseInt(document.getElementById("gs").value);
+      let td=parseInt(document.getElementById("td").value);
+
+
+      let ns= gs-td;
+
+      document.getElementById("result").innerHTML =
+                "NetSalary = " +ns;
+    }
+
+     function clearData() {
+            document.getElementById("gs").value = "";
+            document.getElementById("td").value = "";
+            document.getElementById("ns").value = "";
+            document.getElementById("result").innerHTML = "";
+        }
+    </script>
+</head>
+<body>
+    <h2>netsalary Using Function</h2>
+
+    <input type="number" id="ns" placeholder="netsalary">
+    <br><br>
+
+    <input type="number" id="gs" placeholder="grosssalary">
+    <br><br>
+
+    <input type="number" id="td" placeholder="totaldeduction">
+    <br><br>
+
+
+    <button onclick="getValue()">Calculate</button>
+    <button onclick="clearData()">Clear</button>
+
+    <h1>OUTPUT</h1>
+    <h1>****</h1>
+
+    <h3 id="result"></h3>
+    
+</body>
+</html>

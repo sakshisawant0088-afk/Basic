@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Total and Percentage</title>
+</head>
+<body>
+
+<h1>Total and Percentage</h1>
+
+<input type="number" id="sub1" placeholder="Enter Subject 1 Marks">
+<br><br>
+
+<input type="number" id="sub2" placeholder="Enter Subject 2 Marks">
+<br><br>
+
+<input type="number" id="sub3" placeholder="Enter Subject 3 Marks">
+<br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script>
+
+function totalMarks(sub1, sub2, sub3) {
+    return sub1 + sub2 + sub3;
+}
+
+function percentage(total) {
+    return (total / 300) * 100;
+}
+
+function calculate() {
+
+    let sub1 = Number(document.getElementById("sub1").value);
+    let sub2 = Number(document.getElementById("sub2").value);
+    let sub3 = Number(document.getElementById("sub3").value);
+
+    let total = totalMarks(sub1, sub2, sub3);
+    let per = percentage(total);
+
+    document.getElementById("result").innerHTML =
+        "Total = " + total + "<br>" +
+        "Percentage = " + per.toFixed(2) + "%";
+}
+
+</script>
+
+</body>
+</html>

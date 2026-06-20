@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Square</title>
+</head>
+<body>
+
+<h1>Area of Square</h1>
+
+<input type="number" id="side" placeholder="Enter Side">
+<br><br>
+
+<button onclick="calculate()">Calculate</button>
+
+<h3 id="result"></h3>
+
+<script>
+
+function areaOfSquare(side) {
+    return side * side;
+}
+
+function calculate() {
+
+    let side = Number(document.getElementById("side").value);
+
+    let area = areaOfSquare(side);
+
+    document.getElementById("result").innerHTML = "Area = " + area;
+}
+
+</script>
+
+</body>
+</html>

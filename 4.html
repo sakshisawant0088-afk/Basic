@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest</title>
+
+
+    <script>
+    function getValue(){
+
+      let p=parseInt(document.getElementById("p").value);
+      let r=parseInt(document.getElementById("r").value);
+      let t=parseInt(document.getElementById("t").value);
+
+
+      let si=(p * r * t)/100
+
+      document.getElementById("result").innerHTML =
+                "SimpleInterest = " +si;
+    }
+
+     function clearData() {
+            document.getElementById("p").value = "";
+            document.getElementById("r").value = "";
+            document.getElementById("t").value = "";
+            document.getElementById("result").innerHTML = "";
+        }
+    </script>
+
+</head>
+<body>
+    <h2>Simple Interest Using Function</h2>
+
+    <input type="number" id="p" placeholder="Principle Amount">
+    <br><br>
+
+    <input type="number" id="r" placeholder="Rate(%)">
+    <br><br>
+
+    <input type="number" id="t" placeholder="Time(Years)">
+    <br><br>
+
+
+    <button onclick="getValue()">Calculate</button>
+    <button onclick="clearData()">Clear</button>
+
+    <h1>OUTPUT</h1>
+    <h1>****</h1>
+
+    <h3 id="result"></h3>
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feet to Inches</title>
+</head>
+<body>
+
+<h1>Feet to Inches</h1>
+
+<input type="number" id="feet" placeholder="Enter Feet">
+<button onclick="convert()">Convert</button>
+
+<h3 id="result"></h3>
+
+<script>
+function convert() {
+    let feet = Number(document.getElementById("feet").value);
+
+    let inches = feet * 12;
+
+    document.getElementById("result").innerHTML = inches + " Inches";
+}
+</script>
+
+</body>
+</html>
+    
+</body>
+</html>
